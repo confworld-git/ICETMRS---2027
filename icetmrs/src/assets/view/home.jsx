@@ -147,7 +147,7 @@ export default function HomePage() {
       <HeroSection />
       <Sdg />
       <LogoMarquee/>
-      <AcademicPartnerCard />
+      {/* <AcademicPartnerCard /> */}
       <Journals />
       <Welcome />
       

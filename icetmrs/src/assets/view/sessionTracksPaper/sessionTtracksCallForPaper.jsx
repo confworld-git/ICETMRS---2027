@@ -111,7 +111,7 @@ export default function SessionTracks() {
             Call for Submissions
           </h2>
           <p className="text-gray-700 max-w-4xl xl:max-w-5xl mx-auto leading-relaxed text-lg">
-            Explore the diverse and dynamic session tracks at ICETMRS-2026. We
+            Explore the diverse and dynamic session tracks at ICETMRS-2027. We
             have curated a rich blend of educational and interdisciplinary
             presentations designed to inspire innovation and foster
             collaboration. Join us to engage with cutting-edge research and

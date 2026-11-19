@@ -45,23 +45,6 @@ const Contactus = () => {
               Whether you are an author inquiring about abstract submissions, a delegate planning registration, or an academic leader interested in institutional partnership, our dedicated conference support team is ready to assist you.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-2">
-              <button
-                onClick={() => setPopup(true)}
-                className="bg-indigo-700 hover:bg-indigo-800 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-indigo-700/20 transition-all flex items-center gap-3 transform hover:-translate-y-0.5"
-              >
-                <MessageSquarePlus className="w-5 h-5 text-amber-400" />
-                Ask Quick Enquiry
-              </button>
-              
-              <a
-                href="mailto:info@cerada.in"
-                className="bg-white hover:bg-slate-100 text-indigo-950 font-bold px-6 py-4 rounded-2xl border border-gray-200 shadow-sm transition-all flex items-center gap-2"
-              >
-                <Mail className="w-5 h-5 text-indigo-600" />
-                info@cerada.in
-              </a>
-            </div>
           </div>
 
           {/* Right Magazine Hero Feature Card */}
@@ -112,7 +95,7 @@ const Contactus = () => {
             </div>
             <div>
               <h4 className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">Conference Helpline</h4>
-              <a href="tel:+918072381719" className="text-xl font-extrabold text-indigo-950 hover:text-indigo-600 transition-colors">
+              <a href="tel:+918072381719" className="text-md font-extrabold text-indigo-950 hover:text-indigo-600 transition-colors">
                 +91 80723 81719
               </a>
               <p className="text-xs text-gray-500 mt-2">Mon - Sat | 9:30 AM - 6:30 PM IST</p>
@@ -129,8 +112,8 @@ const Contactus = () => {
             </div>
             <div>
               <h4 className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">Official Support Email</h4>
-              <a href="mailto:info@cerada.in" className="text-lg font-extrabold text-indigo-950 hover:text-amber-600 transition-colors break-all">
-                info@cerada.in
+              <a href="mailto:icetmrs.cerada@gmail.com" className="text-md font-extrabold text-indigo-950 hover:text-amber-600 transition-colors break-all">
+                icetmrs.cerada@gmail.com
               </a>
               <p className="text-xs text-gray-500 mt-2">Expect a response within 12 hours</p>
             </div>
@@ -273,8 +256,8 @@ const Contactus = () => {
 
               <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 text-sm">
                 <span className="text-gray-600 font-medium">Conference Email:</span>
-                <a href="mailto:info@icaebms.com" className="font-bold text-indigo-700 hover:text-amber-600 transition-colors">
-                  info@icaebms.com
+                <a href="mailto:icetmrs.cerada@gmail.com" className="font-bold text-indigo-700 hover:text-amber-600 transition-colors">
+                  icetmrs.cerada@gmail.com
                 </a>
               </div>
             </div>

@@ -20,7 +20,7 @@ export default function LogoMarquee() {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <div className="w-full bg-gradient-to-b from-cyan-50 py-2  overflow-hidden">
+    <div className="w-full bg-gradient-to-b from-cyan-50 py-2 mb-5 mt-5 overflow-hidden">
       <div className="w-full px-4">
         <div className="relative">
           {/* Gradient overlays for fade effect */}

@@ -222,11 +222,11 @@ const publications = [
       {/* Header */}
       <div className=" w-full mb-4 text-center">
         <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
-          Participate in ICETMRS-2026 and Achieve Scopus / SCIE Indexed
+          Participate in ICETMRS-2027 and Achieve Scopus / SCIE Indexed
           Publication
         </h1>
         <p className="text-base md:text-lg text-white leading-relaxed">
-          ICETMRS-2026 offers a valuable opportunity for researchers to present
+          ICETMRS-2027 offers a valuable opportunity for researchers to present
           their work and achieve publication in reputed
           <br /> Scopus / SCIE indexed journals.{" "}
           <b>Selected high-quality papers</b> presented at the conference will

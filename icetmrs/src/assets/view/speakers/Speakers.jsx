@@ -25,14 +25,14 @@ const Speakers = () => {
         await new Promise((resolve) => setTimeout(resolve, 1500)); // simulate longer load
         const res = await axios.get(
           import.meta.env.VITE_API_URL +
-            "/speaker?s=Welcome Address,Guest of Honour,Conference Chair,Keynote Speakers,Session Speakers,Session Chairs"
+            "/speaker?s=Welcome Address,Guest of Honour,Conference Chair,Keynote Speakers,Session Speakers,Session Chairs",
         );
         if (res.status === 200 && res.data.data) {
           const newSpeakers = {};
           res.data.data.forEach((element) => {
             if (element._id) {
               newSpeakers[element._id] = element.speakers.sort(
-                (a, b) => a.position - b.position
+                (a, b) => a.position - b.position,
               );
             }
           });
@@ -59,42 +59,44 @@ const Speakers = () => {
               .fill(null)
               .map((_, index) => <SpeakerSkeleton key={index} />)
           : Array.isArray(speakers[title]) && speakers[title].length > 0
-          ? speakers[title].map((speaker, index) => (
-              <div
-                className="w-full max-w-sm flex flex-col items-center bg-white shadow-xl rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-                key={index}
-              >
-                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#1F06AC] shadow-lg mb-6">
-                  <img
-                    loading="lazy"
-                    alt={speaker.Name}
-                    className="w-full h-full object-cover object-top"
-                    src={`${import.meta.env.VITE_API_URL}/image/${
-                      speaker.Image
-                    }`}
-                  />
-                </div>
-                <div className="flex flex-col gap-2 items-center text-center">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    {speaker.Name}
-                  </h2>
-                  <div className="text-gray-700 text-base leading-relaxed space-y-1 max-h-36 overflow-y-auto custom-scrollbar">
-                    {Array.isArray(speaker.About) &&
-                      speaker.About.map((item, idx) => <p key={idx}>{item}</p>)}
+            ? speakers[title].map((speaker, index) => (
+                <div
+                  className="w-full max-w-sm flex flex-col items-center bg-white shadow-xl rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                  key={index}
+                >
+                  <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#1F06AC] shadow-lg mb-6">
+                    <img
+                      loading="lazy"
+                      alt={speaker.Name}
+                      className="w-full h-full object-cover object-top"
+                      src={`${import.meta.env.VITE_API_URL}/image/${
+                        speaker.Image
+                      }`}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 items-center text-center">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                      {speaker.Name}
+                    </h2>
+                    <div className="text-gray-700 text-base leading-relaxed space-y-1 max-h-36 overflow-y-auto custom-scrollbar">
+                      {Array.isArray(speaker.About) &&
+                        speaker.About.map((item, idx) => (
+                          <p key={idx}>{item}</p>
+                        ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
-          : !loading && (
-              <p className="col-span-full text-gray-600 italic text-lg text-center py-8">
-                Information about our {title} will be updated soon.
-              </p>
-            )}
+              ))
+            : !loading && (
+                <p className="col-span-full text-gray-600 italic text-lg text-center py-8">
+                  Information about our {title} will be updated soon.
+                </p>
+              )}
       </div>
       {/* Separator div after the section content */}
     </div>
   );
-
+  
   return (
     <section>
       <Hero
@@ -103,8 +105,6 @@ const Speakers = () => {
         backgroundImage="/images/commonhero/3.webp"
       />
       <section className="min-h-screen bg-gray-100">
-        
-
         {/* {renderSection("Welcome Address")}
         {renderSection("Guest of Honour")} */}
         {renderSection("Conference Chair")}

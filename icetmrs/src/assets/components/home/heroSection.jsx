@@ -128,19 +128,30 @@ export default function HeroSection() {
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-4">
                 {/* Date Card */}
                 <div className="flex items-center gap-3 bg-[#1F06AC] px-4 py-3 rounded-xl shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow">
-                  <div className="bg-indigo-100 p-2 rounded-lg">
+                  <div className="bg-[#fff] p-2 rounded-lg">
                     <svg
-                      className="w-5 h-5 text-indigo-600"
+                      className="w-5 h-5 text-[#aa0053]"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-calendar-days preview-icon"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
+                      <path d="M8 2v3" />
+                      <path d="M16 2v3" />
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <path d="M3 9h18" />
+                      <path d="M8 13h.01" />
+                      <path d="M12 13h.01" />
+                      <path d="M16 13h.01" />
+                      <path d="M8 17h.01" />
+                      <path d="M12 17h.01" />
+                      <path d="M16 17h.01" />
                     </svg>
                   </div>
                   <div>
@@ -155,19 +166,22 @@ export default function HeroSection() {
 
                 {/* Location Card */}
                 <div className="flex items-center gap-3 bg-[#aa0053] px-4 py-3 rounded-xl shadow-md border-l-4 border-[#aa0053] hover:shadow-lg transition-shadow">
-                  <div className="bg-amber-100 p-2 rounded-lg">
+                  <div className="bg-[#ffffff] p-2 rounded-lg">
                     <svg
-                      className="w-5 h-5 text-[#aa0053]"
+                      className="w-5 h-5 text-[#1F06AC]"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-map-pin preview-icon"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
+                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                      <circle cx="12" cy="10" r="3" />
                     </svg>
                   </div>
                   <div>
@@ -186,26 +200,26 @@ export default function HeroSection() {
                 <div className=" px-4">
                   <div className="flex gap-4 sm:gap-6">
                     {[
-                      { label: "Days", value: timeLeft.days, color: "indigo" },
+                      { label: "Days", value: timeLeft.days, color: "[#1F06AC]" },
                       {
                         label: "Hours",
                         value: timeLeft.hours,
-                        color: "indigo",
+                        color: "[#1F06AC]",
                       },
                       {
                         label: "Minutes",
                         value: timeLeft.minutes,
-                        color: "amber",
+                        color: "[#aa0053]",
                       },
                       {
                         label: "Seconds",
                         value: timeLeft.seconds,
-                        color: "amber",
+                        color: "[#aa0053]",
                       },
                     ].map((item, index) => (
                       <div key={index} className="text-center">
                         <div
-                          className={`text-3xl sm:text-4xl font-bold text-${item.color}-500 mb-1`}
+                          className={`text-3xl sm:text-4xl font-bold text-${item.color} mb-1`}
                         >
                           {item.value.toString().padStart(2, "0")}
                         </div>

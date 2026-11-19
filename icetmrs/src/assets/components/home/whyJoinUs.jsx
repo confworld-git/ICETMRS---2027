@@ -78,7 +78,7 @@ export default function ICETMRSShowcase() {
               Why Join Us?
             </h1>
             <p className="text-xl text-gray-600  mx-auto">
-              Discover what makes ICETMRS-2026 the premier destination for researchers and innovators worldwide
+              Discover what makes ICETMRS-2027 the premier destination for researchers and innovators worldwide
             </p>
           </div>
 

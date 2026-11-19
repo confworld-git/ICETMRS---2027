@@ -64,7 +64,7 @@ export default function Sdg() {
     },
   ];
   return (
-    <div className="bg-white">
+    <div className="bg-white mt-5">
       <div className="text-center md:text-center md:px-10  pt-1 font-semibold text-indigo-800">
         <p>#CERADA Supports SDGs</p>
       </div>

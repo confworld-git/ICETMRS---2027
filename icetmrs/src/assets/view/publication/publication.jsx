@@ -109,7 +109,7 @@ text-base md:text-lg text-slate-600 max-w-2xl mx-auto
 "
               >
                 2<sup>nd</sup> International Conference on Emerging Trends in
-                Multidisciplinary Research Studies (ICETMRS-2026) provides
+                Multidisciplinary Research Studies (ICETMRS-2027) provides
                 several publication opportunities for presented work
               </p>
             </div>
@@ -265,7 +265,7 @@ text-3xl md:text-4xl font-bold text-[#1F06AC] mb-3
               <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 <span className="font-semibold text-[#1F06AC]">
                   2<sup>nd</sup> International Conference on Emerging Trends in
-                  Multidisciplinary Research Studies (ICETMRS-2026)
+                  Multidisciplinary Research Studies (ICETMRS-2027)
                 </span>{" "}
                 adheres to stringent anti-plagiarism policies. Here are the key
                 points about their process

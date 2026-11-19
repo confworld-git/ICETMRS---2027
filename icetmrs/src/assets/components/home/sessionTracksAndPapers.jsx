@@ -64,7 +64,7 @@ export default function SessionAndPapers() {
           limited to:
         </h4>
         <p className=" text-center my-5 text-gray-600">
-          Explore the diverse and dynamic session tracks at ICETMRS-2026! We
+          Explore the diverse and dynamic session tracks at ICETMRS-2027! We
           have curated a rich blend of educational and interdisciplinary
           presentations designed to inspire innovation and foster collaboration.
           Join us to engage with cutting-edge research and vibrant discussions

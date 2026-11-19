@@ -484,7 +484,7 @@ const RegistrationFee = () => {
         amount: data.amount,
         currency: "USD",
         name: "Confworld Educational Research and Development Association (CERADA)",
-        description: "ICETMRS-2026 Conference Registration",
+        description: "ICETMRS-2027 Conference Registration",
         image: "https://i.postimg.cc/3RcrXjsP/cerada-logo.webp",
         order_id: data.order_id,
         handler: async (response) => {
@@ -611,7 +611,7 @@ const RegistrationFee = () => {
         >
           <h1 className="text-3xl text-[#1F06AC] font-bold">Registration</h1>
           <p className="w-11/12 font-medium">
-            Welcome to the ICETMRS-2026 registration page. Secure your spot at
+            Welcome to the ICETMRS-2027 registration page. Secure your spot at
             this premier conference to connect with global experts, present your
             research and advance your career. Follow the steps below to complete
             your registration.
@@ -844,7 +844,7 @@ const RegistrationFee = () => {
           <p className="text-md font-medium mt-2">
             &quot;2<span className="text-sm align-super">nd</span> International
             Conference on Emerging Trends in Multidisciplinary Research Studies
-            (ICETMRS-2026)&quot;
+            (ICETMRS-2027)&quot;
           </p>
 
           <form

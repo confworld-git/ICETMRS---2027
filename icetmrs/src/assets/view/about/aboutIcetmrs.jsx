@@ -97,7 +97,7 @@ export default function AboutICETMRS() {
           <div className="w-full mb-8">
             <p className="text-2xl text-gray-800 leading-relaxed font-light mb-8">
               The 2<sup>nd</sup> International Conference on Emerging Trends in
-              Multidisciplinary Research Studies (ICETMRS-2026) serves as a{" "}
+              Multidisciplinary Research Studies (ICETMRS-2027) serves as a{" "}
               <span className="font-semibold text-[#1F06AC]">
                 global platform
               </span>{" "}
@@ -209,7 +209,7 @@ export default function AboutICETMRS() {
           {/* What We Aim To Do */}
           <div className="mb-8">
             <h3 className="text-3xl font-bold text-[#1F06AC] mb-8">
-              Through this theme, ICETMRS-2026 aims to:
+              Through this theme, ICETMRS-2027 aims to:
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {[
@@ -247,7 +247,7 @@ export default function AboutICETMRS() {
                 Key Focus Areas
               </h1>
               <p className="text-xl text-gray-700 w-full text-center pt-2">
-                These focus areas reflect the core of ICETMRS-2026, aiming to drive
+                These focus areas reflect the core of ICETMRS-2027, aiming to drive
                 sustainable development through interdisciplinary research,
                 technological innovation and educational advancement.
               </p>

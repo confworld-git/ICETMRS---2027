@@ -27,7 +27,7 @@ export default function Proceedings() {
             </div>
             <div className="bg-[#aa0053] rounded-lg">
         <p className="m-10 p-2 font-semibold text-sm text-center text-white">
-          <b>Note: </b>ICETMRS - 2026 Proceedings will be submitted to the Web
+          <b>Note: </b>ICETMRS-2027 Proceedings will be submitted to the Web
           of science Book citation index (BkCI) and Scopus for evaluation and
           indexing purposes (T&C)* apply. 
         </p>

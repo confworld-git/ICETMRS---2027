@@ -15,12 +15,12 @@ const FAQ = () => {
 
   const faqData = [
     {
-  question: "What is ICETMRS-2026?",
+  question: "What is ICETMRS-2027?",
   answer: (
     <>
       The 2<sup className="text-sm align-super ">nd</sup>{" "}
       International Conference on Emerging Trends in Multidisciplinary Research
-      Studies (ICETMRS-2026) is a premier event designed to bring together
+      Studies (ICETMRS-2027) is a premier event designed to bring together
       researchers, professionals, students and scholars from diverse fields.
     </>
   ),
@@ -35,7 +35,7 @@ const FAQ = () => {
     {
       question: "How do I register for the conference?",
       answer:
-        "You can register for ICETMRS-2026 through our online registration portal. Choose your category, fill out the registration form, select your sessions and complete the payment process.",
+        "You can register for ICETMRS-2027 through our online registration portal. Choose your category, fill out the registration form, select your sessions and complete the payment process.",
       category: "Registration",
     },
     {

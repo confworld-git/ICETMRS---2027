@@ -30,14 +30,14 @@ export default function Welcome() {
             <div className="flex items-start gap-12">
               <div className="flex-1">
                 <div className="text-xs uppercase tracking-[0.4em] text-gray-400 mb-6">
-                  ICETMRS-2026
+                  ICETMRS-2027
                 </div>
                 <h1 className="text-[8rem] md:text-[10rem] font-black text-[#1F06AC] leading-none opacity-10 absolute top-0 left-0 pointer-events-none">
                   W
                 </h1>
                 <div className="relative z-10 pt-12">
                   <h1 className="text-4xl md:text-5xl font-bold text-[#1F06AC] leading-tight">
-                    Welcome to ICETMRS-2026
+                    Welcome to ICETMRS-2027
                   </h1>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function Welcome() {
                   <p>
                     We are delighted to welcome you to the 2<sup>nd</sup> International
                     Conference on Emerging Trends in Multidisciplinary Research
-                    Studies (ICETMRS-2026)!
+                    Studies (ICETMRS-2027)!
                   </p>
                   <p>
                     This prestigious conference serves as a dynamic platform for
@@ -67,7 +67,7 @@ export default function Welcome() {
                       "Sustainable Learning Through Multidisciplinary Research
                       and Technological Innovation"
                     </span>
-                    , ICETMRS-2026 focuses on bridging diverse disciplines to address
+                    , ICETMRS-2027 focuses on bridging diverse disciplines to address
                     complex global challenges.
                   </p>
                 </div>
@@ -163,7 +163,7 @@ export default function Welcome() {
               Our Mission
             </h3>
             <p className="text-xl text-gray-600">
-              Through this theme, ICETMRS-2026 seeks to:
+              Through this theme, ICETMRS-2027 seeks to:
             </p>
           </div>
 

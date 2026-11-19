@@ -1,0 +1,140 @@
+// App.jsx - Corrected and Optimized
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout";
+
+// Pages
+import HomePage from "./assets/view/home";
+import AboutIcetmrs from "./assets/view/about/aboutIcetmrs";
+import AboutOrganizer from "./assets/view/about/aboutOrganizer";
+import SessionTracksPaper from "./assets/view/sessionTracksPaper/sessionTtracksCallForPaper";
+import SubmissionGuideline from "./assets/view/submissionGuidelines/submissionGuidelines";
+import Publication from "./assets/view/publication/publication";
+import AbstractFullPaperSubmission from "./assets/view/submissionGuidelines/abstractFullPaperSubmissionPage";
+import EssentialDownload from "./assets/view/essentialDownload/essentialDownloadPage";
+import RegistrationFee from "./assets/view/registration/RegistrationFee";
+import AvailablePayments from "./assets/view/registration/AvailablePayments";
+import Success from "./assets/components/Success/Success";
+import OCMFormPage from "./assets/view/about/ocm-form-page";
+import RegistrationInstructions from "./assets/view/registration/RegistrationInstructions";
+import TermsandConditions from "./assets/view/registration/TermsandConditions";
+import FAQ from "./assets/view/faq/faq";
+import Venue from "./assets/view/venue/Venue";
+import Contactus from "./assets/view/contact-us/Contact-us";
+import AcademicPartner from "./assets/view/academic-partner/AcademicPartner";
+import ThankYou from "./assets/view/thank-you/ThankYou";
+import Speakers from "./assets/view/speakers/Speakers";
+import Speakerlist from "./assets/view/speakers/SpeakerGrid";
+import Sponsors from "./assets/view/sponsors/Sponsors";
+import OrganizingCommitteeMembers from "./assets/view/speakers/OrganizingCommitteeMembers";
+import OCMList from "./assets/view/speakers/OCMGrid";
+import Login from "./assets/view/login/Login";
+import Protected from "./assets/view/protected/Protected";
+
+// {/* dashboard */}
+import DashboardLayout from "./assets/view/dashboard/Dashboard_Layout/DashboardLayout";
+import Dashboard from "./assets/view/dashboard/Dashboard";
+import DRegistration from "./assets/view/dashboard/registration/Registration";
+import DSubmission from "./assets/view/dashboard/submission/Submission";
+import DCommitteeMember from "./assets/view/dashboard/Committee_Member/CommitteeMember";
+import DContact from "./assets/view/dashboard/contact/Contact";
+import DDownload from "./assets/view/dashboard/download/Download";
+import DEnquiry from "./assets/view/dashboard/enquiries/Enquiries";
+import CouponManagement from "./assets/view/dashboard/Couponmanagement";
+
+import {Helmet} from 'react-helmet'
+// (Optional future pages - placeholders)
+// import Login from "./assets/view/auth/Login";
+// import Dashboard from "./assets/view/dashboard/Dashboard";
+// import ProtectedRoute from "./components/auth/ProtectedRoute";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* Homepage */}
+          <Route index element={<HomePage />} />
+
+          {/* About Pages */}
+          <Route path="about-icetmrs" element={<AboutIcetmrs />} />
+          <Route path="about-organizer" element={<AboutOrganizer />} />
+          <Route path="speakerlist" element={<Speakers/>} />
+          <Route path="speakers" element={<Speakerlist/>} />
+          <Route path="exhibits-and-sponsors" element={<Sponsors/>} />
+          <Route
+            path="organizing-committee-member"
+            element={<OCMList/>}
+          />
+          <Route
+            path="organizinglist"
+            element={<OrganizingCommitteeMembers/>}
+          />
+          <Route
+            path="organizing-committee-member-form"
+            element={<OCMFormPage />}
+          />
+
+          {/* Session Tracks */}
+          <Route
+            path="session-tracks-call-for-papers"
+            element={<SessionTracksPaper />}
+          />
+          <Route path="essential-download" element={<EssentialDownload />} />
+
+          {/* Paper Submission */}
+          <Route
+            path="submission-guidelines"
+            element={<SubmissionGuideline />}
+          />
+          
+          <Route
+            path="abstract-full-paper-submission"
+            element={<AbstractFullPaperSubmission />}
+          />
+          <Route path="publication" element={<Publication />} />
+
+          {/* Registration */}
+          <Route path="registration-fees" element={<RegistrationFee />} />
+          <Route path="available-payments" element={<AvailablePayments />} />
+          <Route
+            path="registration-instruction"
+            element={<RegistrationInstructions />}
+          />
+          <Route path="terms-and-conditions" element={<TermsandConditions />} />
+          <Route path="payment-details-success" element={<ThankYou />} />
+          <Route path="thank-you" element={<ThankYou />} />
+
+          <Route path="faq" element={<FAQ />} />
+          <Route path="venue" element={<Venue />} />
+          <Route path="contact-us" element={<Contactus />} />
+          <Route path="academic-partner" element={<AcademicPartner />} />
+
+          <Route
+            path="*"
+            element={
+              <div className="p-4 text-center text-red-600 text-xl">
+                404 - Page not found
+              </div>
+            }
+          />
+        </Route>
+        {/* Dashboard */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Protected />}>
+          <Route path="/Dashboard" element={<DashboardLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="Registration" element={<DRegistration />} />
+            <Route path="Submission" element={<DSubmission />} />
+            <Route path="CommitteeMember" element={<DCommitteeMember />} />
+            <Route path="Contact" element={<DContact />} />
+            <Route path="Downloads" element={<DDownload />} />
+            <Route path="Enquiries" element={<DEnquiry />} />
+            <Route path="CouponManagement" element={<CouponManagement />} />
+          </Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;

@@ -1,0 +1,8 @@
+{
+  "code": "ID50",
+  "discountPercent": 0,
+  "isActive": true,
+  "usageLimit": null,
+  "expiresAt": "2026-08-31T23:59:59.999Z",
+  "description": "Promotional coupon: $50 USD flat discount on registration fee. Valid until 31 August 2026."
+}

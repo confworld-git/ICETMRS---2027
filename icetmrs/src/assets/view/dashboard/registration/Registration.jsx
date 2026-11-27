@@ -74,7 +74,7 @@ const Registration = () => {
   return (
     <section>
       {/* <Helmet>
-        <title>Dashboard | ICETMRS 2026</title>
+        <title>Dashboard | ICETMRS 2027</title>
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://iclsmha.cerada.in/Dashboard/Registration" />
       </Helmet> */}

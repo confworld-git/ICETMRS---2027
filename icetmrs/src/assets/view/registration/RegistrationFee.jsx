@@ -498,6 +498,48 @@ const RegistrationFee = () => {
                 Order_ID: data.order_id,
               },
             );
+            // GA4 / GTM purchase push
+            const items = [
+              {
+                item_id: selectedBase.category,
+                item_name: selectedBase.title,
+                item_category: "Registration",
+                price: Number(selectedBase.value),
+                quantity: 1,
+              },
+              ...(selectedJournal
+                ? [
+                    {
+                      item_id: `journal_${selectedJournal.tier}`,
+                      item_name: selectedJournal.package,
+                      item_category: "Journal Support",
+                      price: Number(selectedJournal.specialPrice),
+                      quantity: 1,
+                    },
+                  ]
+                : []),
+              ...selectedAddons.map((a) => ({
+                item_id: a.label,
+                item_name: a.label,
+                item_category: "Add-on",
+                price: Number(a.price),
+                quantity: 1,
+              })),
+            ];
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ ecommerce: null });
+            window.dataLayer.push({
+              event: "Registration",
+              conference_name: "ICETMRS-2027",
+              ecommerce: {
+                transaction_id: response.razorpay_payment_id,
+                value: Number((data.amount / 100).toFixed(2)),
+                currency: "USD",
+                tax: Number((pricing.bankTax || 0).toFixed(2)),
+                items,
+              },
+            });
             navigate("/payment-details-success", {
               state: {
                 amount: (data.amount / 100).toFixed(2),

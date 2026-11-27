@@ -54,14 +54,14 @@ export const paper_submission_Create = async (req, res) => {
       },
     ];
     mail(
-      "New Paper Submission from ICETMRS-2026",
+      "New Paper Submission from ICETMRS-2027",
       paper_submission_lead(data),
       attachment,
       "icetmrs.cerada@gmail.com"
     );
     // reply mail
     mail(
-      "New Paper Submission from ICETMRS-2026",
+      "New Paper Submission from ICETMRS-2027",
       paper_submission_reply(data),
       null,
       data.correspondingEmail

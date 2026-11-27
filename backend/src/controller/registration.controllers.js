@@ -225,7 +225,7 @@ export const registration_Create = async (req, res) => {
 </head>
 <body style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background-color:#f7f9fc;margin:0;padding:20px;">
   <div style="background:#fff;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.1);padding:40px;max-width:600px;margin:auto;border-top:5px solid #4f46e5;">
-    <h2 style="color:#4f46e5;font-size:26px;margin-bottom:15px;">New Registration from ICETMRS-2026</h2>
+    <h2 style="color:#4f46e5;font-size:26px;margin-bottom:15px;">New Registration from ICETMRS-2027</h2>
 
     <p style="color:#333;font-size:16px;line-height:1.6;margin-bottom:10px;"><span style="font-weight:bold;">Title:</span> ${registration.Title}</p>
     <p style="color:#333;font-size:16px;line-height:1.6;margin-bottom:10px;"><span style="font-weight:bold;">Full Name:</span> ${registration.first_name} ${registration.last_name}</p>
@@ -270,7 +270,7 @@ export const registration_Create = async (req, res) => {
       amount: order.amount,
     });
 
-    sendEmailToAdmin("New Registration from ICETMRS-2026", HtmlTemplate);
+    sendEmailToAdmin("New Registration from ICETMRS-2027", HtmlTemplate);
   } catch (error) {
     console.log(error);
     res

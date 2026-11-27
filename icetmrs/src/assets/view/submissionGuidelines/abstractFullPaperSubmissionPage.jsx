@@ -9,7 +9,6 @@ import "react-phone-number-input/style.css";
 import { Helmet } from "react-helmet";
 
 const AbstractFullPaperSubmission = () => {
-  
   const SubmissionRef = useRef();
   const navigate = useNavigate();
   const [mobile, setMobile] = useState("");
@@ -32,7 +31,7 @@ const AbstractFullPaperSubmission = () => {
 
       if (!allowedFileTypes.includes(file.type)) {
         toaster.warning(
-          "Invalid file type. Please upload a .doc or .docx file."
+          "Invalid file type. Please upload a .doc or .docx file.",
         );
         event.target.value = "";
         return;
@@ -40,7 +39,7 @@ const AbstractFullPaperSubmission = () => {
 
       if (file.size > maxFileSize) {
         toaster.warning(
-          "File size exceeds the 300KB limit. Please upload a smaller file."
+          "File size exceeds the 300KB limit. Please upload a smaller file.",
         );
         event.target.value = "";
         return;
@@ -113,8 +112,14 @@ const AbstractFullPaperSubmission = () => {
           headers: {
             "Content-Type": "multipart/form-data",
           },
-        }
+        },
       );
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "paper_submission",
+        conference_name: "ICETMRS-2027",
+        submissionId: newSubmissionID,
+      });
       SubmissionRef.current.reset();
       setMobile("");
       toaster.success(response.data.message || "Paper submitted successfully!");
@@ -124,8 +129,8 @@ const AbstractFullPaperSubmission = () => {
           name: formValues["authorName"] || "Author",
           id: newSubmissionID,
           title: formValues["paper_title"] || "Submitted Paper",
-          paymentStatus: "Submission Verified"
-        }
+          paymentStatus: "Submission Verified",
+        },
       });
     } catch (error) {
       toaster.danger("Something's wrong");
@@ -139,13 +144,11 @@ const AbstractFullPaperSubmission = () => {
         breadcrumbs={[{ label: "Home", link: "#" }]}
         backgroundImage="/images/commonhero/8.webp"
       />
-      
+
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-12" >
-            
-            
+          <div className="text-center mb-12">
             <h1
               className="
 text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
@@ -154,14 +157,13 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
               Abstract/Full Paper Submission
             </h1>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Submit your research paper for review. Please ensure all required fields are completed accurately.
+              Submit your research paper for review. Please ensure all required
+              fields are completed accurately.
             </p>
           </div>
 
           {/* Form Section */}
-          <div 
-            className="bg-white rounded-2xl shadow-2xl overflow-hidden border-t-4 border-[#aa0053]"
-          >
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-t-4 border-[#aa0053]">
             <form
               ref={SubmissionRef}
               onSubmit={HandleSubmission}
@@ -174,22 +176,26 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
                 </label>
                 <div className="flex gap-6">
                   <label className="flex items-center gap-3 cursor-pointer group">
-                    <input 
-                      type="radio" 
-                      name="Submission_type" 
+                    <input
+                      type="radio"
+                      name="Submission_type"
                       value="Abstract"
                       className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                     />
-                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">Abstract</span>
+                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                      Abstract
+                    </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer group">
-                    <input 
-                      type="radio" 
-                      name="Submission_type" 
+                    <input
+                      type="radio"
+                      name="Submission_type"
                       value="Full paper"
                       className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                     />
-                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">Full Paper</span>
+                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                      Full Paper
+                    </span>
                   </label>
                 </div>
               </div>
@@ -238,7 +244,8 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
               {/* Email */}
               <div>
                 <label className="block text-indigo-900 font-semibold mb-2">
-                  Corresponding Author Email <span className="text-amber-500">*</span>
+                  Corresponding Author Email{" "}
+                  <span className="text-amber-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -253,7 +260,8 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-indigo-900 font-semibold mb-2">
-                    Mobile Number (With Country Code) <span className="text-amber-500">*</span>
+                    Mobile Number (With Country Code){" "}
+                    <span className="text-amber-500">*</span>
                   </label>
                   <PhoneInput
                     defaultCountry="US"
@@ -264,7 +272,8 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
                 </div>
                 <div>
                   <label className="block text-indigo-900 font-semibold mb-2">
-                    WhatsApp/Viber Number <span className="text-amber-500">*</span>
+                    WhatsApp/Viber Number{" "}
+                    <span className="text-amber-500">*</span>
                   </label>
                   <input
                     type="tel"
@@ -307,17 +316,20 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 border-b border-gray-200">
                 <div>
                   <label className="block text-indigo-900 font-semibold mb-3">
-                    Presentation Category <span className="text-amber-500">*</span>
+                    Presentation Category{" "}
+                    <span className="text-amber-500">*</span>
                   </label>
                   <div className="flex gap-6">
                     <label className="flex items-center gap-3 cursor-pointer group">
-                      <input 
-                        type="radio" 
-                        name="presentationCategory" 
+                      <input
+                        type="radio"
+                        name="presentationCategory"
                         value="oral"
                         className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                       />
-                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">Oral</span>
+                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                        Oral
+                      </span>
                     </label>
                     <label className="flex items-center gap-3 cursor-pointer group">
                       <input
@@ -326,7 +338,9 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
                         value="poster"
                         className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                       />
-                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">Poster</span>
+                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                        Poster
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -337,22 +351,26 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
                   </label>
                   <div className="flex gap-6">
                     <label className="flex items-center gap-3 cursor-pointer group">
-                      <input 
-                        type="radio" 
-                        name="presentationType" 
+                      <input
+                        type="radio"
+                        name="presentationType"
                         value="Virtual"
                         className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                       />
-                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">Virtual</span>
+                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                        Virtual
+                      </span>
                     </label>
                     <label className="flex items-center gap-3 cursor-pointer group">
-                      <input 
-                        type="radio" 
-                        name="presentationType" 
+                      <input
+                        type="radio"
+                        name="presentationType"
                         value="Physical"
                         className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                       />
-                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">Physical</span>
+                      <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                        Physical
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -361,7 +379,8 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
               {/* Institution Details */}
               <div>
                 <label className="block text-indigo-900 font-semibold mb-2">
-                  University/Institution Name <span className="text-amber-500">*</span>
+                  University/Institution Name{" "}
+                  <span className="text-amber-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -406,22 +425,26 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
                 </label>
                 <div className="flex gap-6">
                   <label className="flex items-center gap-3 cursor-pointer group">
-                    <input 
-                      type="radio" 
-                      name="Publication_Required" 
+                    <input
+                      type="radio"
+                      name="Publication_Required"
                       value="yes"
                       className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                     />
-                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">Yes</span>
+                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                      Yes
+                    </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer group">
-                    <input 
-                      type="radio" 
-                      name="Publication_Required" 
+                    <input
+                      type="radio"
+                      name="Publication_Required"
                       value="no"
                       className="w-5 h-5 text-indigo-600 focus:ring-[#aa0053] focus:ring-2"
                     />
-                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">No</span>
+                    <span className="text-gray-700 group-hover:text-indigo-600 transition-colors">
+                      No
+                    </span>
                   </label>
                 </div>
               </div>
@@ -449,7 +472,8 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
               {/* Conference Source */}
               <div>
                 <label className="block text-indigo-900 font-semibold mb-2">
-                  How did you know about the conference? <span className="text-amber-500">*</span>
+                  How did you know about the conference?{" "}
+                  <span className="text-amber-500">*</span>
                 </label>
                 <textarea
                   name="conferenceSource"
@@ -478,8 +502,18 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
                   type="submit"
                   className="w-full bg-gradient-to-r from-[#1F06AC] to-[#1F06AC] hover:from-[#1F06AC] hover:to-[#1F06AC] text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-3 text-lg"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   Submit Your Paper
                 </button>
@@ -490,7 +524,8 @@ text-4xl md:text-5xl font-bold text-[#1F06AC] mb-4
           {/* Footer Note */}
           <div className="text-center mt-8 text-gray-600">
             <p className="text-sm">
-              <span className="text-amber-500">*</span> indicates required fields
+              <span className="text-amber-500">*</span> indicates required
+              fields
             </p>
           </div>
         </div>

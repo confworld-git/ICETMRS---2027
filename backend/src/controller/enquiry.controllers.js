@@ -20,7 +20,7 @@ export const enquiry_Create = async (req, res) => {
     const enquiry = new Enquiry(req.body);
     await enquiry.save();
     mail(
-      "New Enquiry from ICETMRS-2026",
+      "New Enquiry from ICETMRS-2027",
       enquiry_email(enquiry),
       null,
       "icetmrs.cerada@gmail.com"

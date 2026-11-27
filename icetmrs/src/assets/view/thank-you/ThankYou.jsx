@@ -11,7 +11,7 @@ const ThankYou = () => {
   const { 
     type = "submission", // "registration" | "submission"
     name = "Delegate / Author",
-    id = "ICETMRS2026_REF_" + Math.floor(100000 + Math.random() * 900000),
+    id = "ICETMRS2027_REF_" + Math.floor(100000 + Math.random() * 900000),
     title = "Multidisciplinary Research Contribution",
     amount = null,
     paymentStatus = "Completed",

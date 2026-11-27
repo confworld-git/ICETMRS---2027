@@ -109,12 +109,6 @@ export default function HeroSection() {
                 <p className="text-base sm:text-lg">
                   <span className="font-bold">Organized by: </span>
                   <span className="font-semibold">
-                    {" "}
-                    GlobalNxt University, Malaysia and
-                  </span>{" "}
-                  <br />
-                  <span className="font-semibold">
-                    {" "}
                     Confworld Educational Research and Development Association
                   </span>
                 </p>
@@ -200,7 +194,11 @@ export default function HeroSection() {
                 <div className=" px-4">
                   <div className="flex gap-4 sm:gap-6">
                     {[
-                      { label: "Days", value: timeLeft.days, color: "[#1F06AC]" },
+                      {
+                        label: "Days",
+                        value: timeLeft.days,
+                        color: "[#1F06AC]",
+                      },
                       {
                         label: "Hours",
                         value: timeLeft.hours,

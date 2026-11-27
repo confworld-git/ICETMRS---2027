@@ -33,7 +33,7 @@ export const CommitteeMember_Create = async (req, res) => {
       },
     ];
     mail(
-      "New Committee Member from ICETMRS-2026",
+      "New Committee Member from ICETMRS-2027",
       committee_member_email(committeeMember),
       attachment,
       "icetmrs.cerada@gmail.com"
